@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+      body{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: azure;
+      }
+      table,tr,td{
+        border: 2px solid red;
+        border-collapse: collapse;
+      }
+      img{
+        width: 100%;
+      }
+      @media screen and (min-width:600px) {
+        img{
+          width: 100%;
+          height: 60vh;
+        }
+      }
+    </style>
+</head>
+<body>
+    <script>
+      // task1
+        const paragraph = document.createElement('p');
+        paragraph.innerText = "A mother is a source of unconditional love and support , nurturing us through every stage of life";
+        document.body.appendChild(paragraph);
+
+        // task2
+          const div = document.createElement('div');
+const h1 = document.createElement('h1');
+h1.innerText = "Praveen";
+
+const h2 = document.createElement('h2');
+h2.innerText = "Kumar";
+div.appendChild(h1);
+div.appendChild(h2);
+document.body.appendChild(div);
+
+// tas3
+const ul = document.createElement('ul');
+const li1 = document.createElement('li');
+li1.innerText = "Praveen kumar reddy";
+ul.appendChild(li1);
+
+const li2 = document.createElement('li');
+li2.innerText = "Pavan kumar Reddy";
+ul.appendChild(li2);
+
+const li3 = document.createElement('li');
+li3.innerText = "Bhaskar Reddy";
+ul.appendChild(li3);
+document.body.appendChild(ul);
+
+        // tas4
+        const table = document.createElement('table');
+
+// Create the first row
+const row1 = document.createElement('tr');
+const cell1_1 = document.createElement('td');
+cell1_1.innerText = "one";
+row1.appendChild(cell1_1);
+
+const cell1_2 = document.createElement('td');
+cell1_2.innerText = "two";
+row1.appendChild(cell1_2);
+
+const cell1_3 = document.createElement('td');
+cell1_3.innerText = "three";
+row1.appendChild(cell1_3);
+table.appendChild(row1);
+
+// Create the second row
+const row2 = document.createElement('tr');
+const cell2_1 = document.createElement('td');
+cell2_1.innerText = "four";
+row2.appendChild(cell2_1);
+
+const cell2_2 = document.createElement('td');
+cell2_2.innerText = "five";
+row2.appendChild(cell2_2);
+
+const cell2_3 = document.createElement('td');
+cell2_3.innerText = "six";
+row2.appendChild(cell2_3);
+table.appendChild(row2);
+
+// Create the third row
+const row3 = document.createElement('tr');
+const cell3_1 = document.createElement('td');
+cell3_1.innerText = "seven";
+row3.appendChild(cell3_1);
+
+const cell3_2 = document.createElement('td');
+cell3_2.innerText = "eight";
+row3.appendChild(cell3_2);
+
+const cell3_3 = document.createElement('td');
+cell3_3.innerText = "nine";
+row3.appendChild(cell3_3);
+table.appendChild(row3);
+
+// Step 3: Append the table to the body
+document.body.appendChild(table);
+
+// task5
+
+// Step 1: Create a <div>
+  const div1 = document.createElement('div');
+
+// Step 2: Create an <img> and set the src attribute
+const img = document.createElement('img');
+img.src = 'download.jpeg'; // Replace with your image URL
+img.alt = 'Placeholder Image'; // Alternative text for the image
+
+// Step 3: Create a <p> for the caption
+const caption = document.createElement('p');
+caption.innerText = "Likitha one of a beautiful girl in the class";
+
+// Append the image and caption to the div
+div.appendChild(img);
+div.appendChild(caption);
+
+// Append the div to the body
+document.body.appendChild(div1);
+
+// task6
+
+        // Step 1: Create the main <ol>
+        let mainOrderedList = document.createElement('ol');
+
+        // Create the first list item
+        let firstListItem = document.createElement('li');
+        firstListItem.innerText = "Praveen";
+        mainOrderedList.appendChild(firstListItem);
+
+        // Create the second list item
+        let secondListItem = document.createElement('li');
+        secondListItem.innerText = "Kumar";
+
+        // Step 2: Create a nested <ol> for the second list item
+        let nestedOrderedList = document.createElement('ol');
+
+        // Create items for the nested list
+        let nestedItem1 = document.createElement('li');
+        nestedItem1.innerText = "Reddy";
+        nestedOrderedList.appendChild(nestedItem1);
+
+        let nestedItem2 = document.createElement('li');
+        nestedItem2.innerText = "REddy";
+        nestedOrderedList.appendChild(nestedItem2);
+
+        // Append the nested <ol> to the second list item
+        secondListItem.appendChild(nestedOrderedList);
+        mainOrderedList.appendChild(secondListItem);
+
+        // Step 3: Append the main <ol> to the body
+        document.body.appendChild(mainOrderedList);
+        
+        // task7
+
+          // Step 1: Create a <section>
+            let newYorkSection = document.createElement('section');
+
+// Create a <h2> for the heading
+let tokyoHeading = document.createElement('h2');
+tokyoHeading.innerText = "Welcome to Tokyo";
+
+// Create a <p> for the paragraph
+let londonParagraph = document.createElement('p');
+londonParagraph.innerText = "London is a vibrant city known for its history and culture.";
+
+// Step 2: Append the heading and paragraph to the section
+newYorkSection.appendChild(tokyoHeading);
+newYorkSection.appendChild(londonParagraph);
+
+// Step 3: Append the section to the body
+document.body.appendChild(newYorkSection);
+
+// task8
+  // Step 1: Create a <dl>
+    let supermanDescriptionList = document.createElement('dl');
+
+// Create the first term and description for Superman
+let batmanTerm = document.createElement('dt');
+batmanTerm.innerText = "Batman";
+let batmanDescription = document.createElement('dd');
+batmanDescription.innerText = "A vigilante hero from Gotham City, known for his intelligence and combat skills.";
+
+// Create the second term and description for Wonder Woman
+let wonderWomanTerm = document.createElement('dt');
+wonderWomanTerm.innerText = "Wonder Woman";
+let wonderWomanDescription = document.createElement('dd');
+wonderWomanDescription.innerText = "An Amazonian warrior princess, known for her strength and compassion.";
+
+// Create the third term and description for Spider-Man
+let spiderManTerm = document.createElement('dt');
+spiderManTerm.innerText = "Spider-Man";
+let spiderManDescription = document.createElement('dd');
+spiderManDescription.innerText = "A young hero with spider-like abilities, known for his agility and sense of responsibility.";
+
+// Step 2: Append the terms and descriptions to the description list
+supermanDescriptionList.appendChild(batmanTerm);
+supermanDescriptionList.appendChild(batmanDescription);
+supermanDescriptionList.appendChild(wonderWomanTerm);
+supermanDescriptionList.appendChild(wonderWomanDescription);
+supermanDescriptionList.appendChild(spiderManTerm);
+supermanDescriptionList.appendChild(spiderManDescription);
+
+// Step 3: Append the list to the body
+document.body.appendChild(supermanDescriptionList);
+
+// tak9  
+
+// Step 1: Create a <div>
+  let quoteContainer = document.createElement('div');
+
+// Step 2: Create a <blockquote>
+let quoteBlock = document.createElement('blockquote');
+quoteBlock.innerText = "The only limit to our realization of tomorrow is our doubts of today.";
+
+// Step 3: Append the blockquote to the div
+quoteContainer.appendChild(quoteBlock);
+
+// Step 4: Append the div to the body
+document.body.appendChild(quoteContainer);
+
+// task10
+
+let contentDiv = document.createElement('div');
+
+// Step 2: Create three <p> elements
+let paragraph1 = document.createElement('p');
+paragraph1.innerText = "This is the first paragraph, introducing the topic.";
+
+let paragraph2 = document.createElement('p');
+paragraph2.innerText = "This is the second paragraph, providing additional information.";
+
+let paragraph3 = document.createElement('p');
+paragraph3.innerText = "This is the third paragraph, concluding the discussion.";
+
+// Step 3: Append all paragraphs to the div
+contentDiv.appendChild(paragraph1);
+contentDiv.appendChild(paragraph2);
+contentDiv.appendChild(paragraph3);
+
+// Step 4: Append the div to the body
+document.body.appendChild(contentDiv);
+    </script>
+</body>
+</html>
